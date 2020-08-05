@@ -1,6 +1,7 @@
 package com.microcred.composite.model;
 
 import java.math.BigDecimal;
+import java.time.OffsetDateTime;
 
 /**
  * Class to hold transfer request data
@@ -8,17 +9,12 @@ import java.math.BigDecimal;
  */
 public class TransferDataRequest {
 
-	private Long transferId;
 	private String fromAcctId;
 	private String toAcctId;
 	private BigDecimal amount;
+	private OffsetDateTime transferDate;
 	private String transferNote;
-	public Long getTransferId() {
-		return transferId;
-	}
-	public void setTransferId(Long transferId) {
-		this.transferId = transferId;
-	}
+	
 	public String getFromAcctId() {
 		return fromAcctId;
 	}
@@ -36,6 +32,12 @@ public class TransferDataRequest {
 	}
 	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
+	}
+	public OffsetDateTime getTransferDate() {
+		return transferDate;
+	}
+	public void setTransferDate(OffsetDateTime transferDate) {
+		this.transferDate = transferDate;
 	}
 	public String getTransferNote() {
 		return transferNote;
